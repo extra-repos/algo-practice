@@ -47,4 +47,19 @@ function fib (num){
 }
 fib(10)
 
+//isSorted - Returns true or false, indicating whether the given array of numbers is sorted.
+function isSorted (arr){
+
+  for (let i =0; i<arr.length; i++){
+  for (let j = i+1; j<arr.length; j++){
+    if (arr[i]> arr[j]){
+      return false
+    } 
+  }
+  } return true
+}
+isSorted([])                        // true
+isSorted([-Infinity, -5, 0, 3, 9])  // true
+isSorted([3, 9, -3, 10])            // false
+
 //
