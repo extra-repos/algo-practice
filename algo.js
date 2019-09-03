@@ -15,3 +15,18 @@ function isPrime (num){
 isPrime(8)
 
 
+//factorial - Returns a number that is the factorial of the given number.
+
+factorial(0)                        // 1
+factorial(1)                        // 1
+factorial(6)                        // 720
+
+function factorial (num){
+  let sum = 1
+  for (let i = num; i > 0; i--){
+    sum *= i
+  } return sum
+}
+factorial(6)
+
+//
