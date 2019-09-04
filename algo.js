@@ -63,10 +63,10 @@ isSorted([-Infinity, -5, 0, 3, 9])  // true
 isSorted([3, 9, -3, 10])            // false
 
 //filter - Implement the filter function.
-function filter(arr, arg) {
+function filter(arr, callback) {
   let lessThan = [];
   for (let i = 0; i < arr.length; i++) {
-    if (arg(arr[i])) {
+    if (callback(arr[i])) {
       lessThan.push(arr[i]);
     }
   }
