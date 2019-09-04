@@ -88,4 +88,37 @@ reduce([1, 2, 3, 4], (a, b) => a + b, 0) // 10
 let arr = [1, 2, 3, 4]
 //arr.reduce((a, b) => a + b, 0)
 
-//
+// Most common letter in a string
+
+function getMax(string) {
+ let max = 0,
+     maxChar = '';
+  string.split('').forEach( char =>{
+    if(string.split(char).length > max) {
+        max = string.split(char).length;
+        maxChar = char;
+     }
+  });
+  return "letter "+maxChar +" : "+ 'amount '+ (max-1);
+};
+getMax('Batman')
+
+//or
+
+function getMax (string){
+var strCounts = {};
+var maxKey = '';
+for(var i = 0; i < string.length; i++)
+{
+    var key = string[i];
+    if(!strCounts[key]){
+     strCounts[key] = 0;
+    }
+    strCounts[key]++;
+    if(maxKey == '' || strCounts[key] > strCounts[maxKey]){
+        maxKey = key;
+    }
+} return ("letter "+maxKey +" : "+ 'amount '+ strCounts[maxKey])
+}
+
+getMax("Batman")
