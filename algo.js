@@ -75,4 +75,17 @@ function filter(arr, callback) {
 filter([1, 2, 3, 4], n => n < 3); // [1, 2]
 
 
+//reduce - Implement the reduce function.
+function reduce(array, callback, startingValue){
+  for (let i=0; i<array.length; i++){
+    startingValue = callback(startingValue,array[i])
+  }return startingValue
+}
+
+reduce([1, 2, 3, 4], (a, b) => a + b, 0) // 10
+
+
+let arr = [1, 2, 3, 4]
+//arr.reduce((a, b) => a + b, 0)
+
 //
